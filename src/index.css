@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-handwriting {
+    font-family: 'Caveat', cursive, sans-serif;
+  }
+  .font-display {
+    font-family: 'Syne', sans-serif;
+  }
+  .font-serif-vintage {
+    font-family: 'Playfair Display', serif;
+  }
+  .font-mono-cam {
+    font-family: 'VT323', monospace;
+  }
+  .font-sans-clean {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .perspective-1500 {
+    perspective: 1500px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+}
+
+/* Custom scrollbar for film roll and horizontal scroller */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(20, 5, 8, 0.4);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #d4af37;
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #f1cf68;
+}
+
+/* Paper torn edge illusion */
+.torn-edge {
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+/* Subtle film grain overlay */
+.film-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+/* Washi tape semi-translucent styling */
+.washi-tape {
+  background: rgba(248, 245, 235, 0.72);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15), inset 0 0 4px rgba(255,255,255,0.4);
+}
+
+.washi-tape-red {
+  background: rgba(184, 41, 55, 0.65);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Flash burst animation */
+@keyframes camera-flash {
+  0% { opacity: 0; }
+  15% { opacity: 0.95; }
+  100% { opacity: 0; }
+}
+
+.animate-flash {
+  animation: camera-flash 0.45s ease-out forwards;
+}
+
+/* 5-second skill countdown progress bar */
+@keyframes skill-progress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+.animate-skill-progress {
+  animation: skill-progress 5s linear infinite;
+}

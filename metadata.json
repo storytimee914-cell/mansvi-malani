@@ -1,0 +1,6 @@
+{
+  "name": "Mansvi Malani — 3D Creative Portfolio & Archive",
+  "description": "3D interactive personal portfolio for Mansvi Malani combining digital scrapbook, retro digicam, and film-roll aesthetics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
